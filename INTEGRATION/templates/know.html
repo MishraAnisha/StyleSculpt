@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300&family=Rubik:wght@400;500;700&display=swap">
+    <title>STYLESCULPT</title>
+<style>
+ body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    border-radius: 0px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    position: relative;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.nav-links li {
+    margin: 0 20px;
+    position: relative;
+    color: #fff;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+}
+
+.nav-links a:hover {
+    text-decoration: none;
+}
+
+/* Hover effect */
+.menu1 li:after,
+.menu1 li:before {
+    content: "";
+    position: absolute;
+    display: block;
+    border: 0 solid transparent;
+    width: 0%;
+    height: 0%;
+    transition: all 0.3s ease;
+}
+
+.menu1 li:after {
+    top: 0;
+    left: 0;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+}
+
+.menu1 li:before {
+    right: 0;
+    bottom: 0;
+    border-bottom: 2px solid transparent;
+    border-right: 2px solid transparent;
+}
+
+.menu1 li:hover::before,
+.menu1 li:hover::after {
+    width: 10px;
+    height: 10px;
+    border-color: #ff8b8b;
+}
+
+.logo {
+    position: absolute;
+    left: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem; /* Optionally increase logo font size */
+    color: #FFFFFF;
+}
+
+a {
+    text-decoration: none; /* Remove underline from all anchor tags */
+}
+
+.understand-bodyh2{
+    color: #e5e5e5;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-item {
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #222; /* Darker background for grid items */
+    text-align: left; 
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+
+.body-image {
+    width: 100%;
+    height: auto;
+}
+
+h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    font-family: 'Museo Sans', sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    text-align: center;
+}
+
+p {
+    margin: 10px 0;
+    font-family: 'Museo Sans', sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+}
+
+ul {
+    list-style-type: disc; 
+    padding-left: 20px; 
+}
+ li{
+    color: rgb(255, 255, 255);
+}
+
+.points-list {
+    margin: 0; 
+}
+
+.understand-bodyh2 {
+    text-align: center; 
+    font-family: 'Museo Sans', sans-serif;
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.footer {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 30px 30px 20px 30px;
+    color: #2f2f2f;
+    background-color: #fff;
+    border-top: 1px solid #e5e5e5;
+  }
+  
+  .footer > * {
+    flex:  1 100%;
+  }
+  
+  .footer__addr {
+    margin-right: 1.25em;
+    margin-bottom: 2em;
+  }
+  
+  .footer__logo {
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+    text-transform: lowercase;
+    font-size: 1.5rem;
+  }
+  
+  .footer__addr h2 {
+    margin-top: 1.3em;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  
+  .nav__title {
+    font-weight: 400;
+    font-size: 15px;
+  }
+  
+  .footer address {
+    font-style: normal;
+    color: #999;
+  }
+  
+  .footer__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    max-width: max-content;
+    background-color: rgb(33, 33, 33, 0.07);
+    border-radius: 100px;
+    color: #2f2f2f;
+    line-height: 0;
+    margin: 0.6em 0;
+    font-size: 1rem;
+    padding: 0 1.3em;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .footer li {
+    line-height: 2em;
+  }
+  
+  .footer a {
+    text-decoration: none;
+  }
+  
+  .footer__nav {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+  .footer__nav > * {
+    flex: 1 50%;
+    margin-right: 1.25em;
+  }
+  
+  .nav__ul a {
+    color: #999;
+  }
+  
+  .nav__ul--extra {
+    column-count: 2;
+    column-gap: 1.25em;
+  }
+  
+  .legal {
+    display: flex;
+    flex-wrap: wrap;
+    color: #999;
+  }
+    
+  .legal__links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .heart {
+    color: #2f2f2f;
+  }
+  
+  @media screen and (min-width: 24.375em) {
+    .legal .legal__links {
+      margin-left: auto;
+    }
+  }
+  
+  @media screen and (min-width: 40.375em) {
+    .footer__nav > * {
+      flex: 1;
+    }
+    
+    .nav__item--extra {
+      flex-grow: 2;
+    }
+    
+    .footer__addr {
+      flex: 1 0px;
+    }
+    
+    .footer__nav {
+      flex: 2 0px;
+    }
+  } 
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <span>STYLESCULPT</span>
+            </div>
+            <ul class="nav-links menu1">
+                <li><a href="./home.html">HOME</a></li>
+                <li><a href="./recom.html">RECOMMENDATIONS</a></li>
+                <li><a href="./know.html">KNOW MORE</a></li>
+                <li><a href="./challenge.html">CHALLENGE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+ <section  id="know-more" class="understand-body-shape">
+    <div style="background-color: #000; padding: 20px;">
+        <h2 class="understand-bodyh2">UNDERSTAND YOUR BODY SHAPE</h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="static\knowmore\hourglass.png" />
+                <h3>Hourglass</h3>
+                <p>The hourglass body shape is characterized by a well-defined waist with balanced bust and hip measurements.</p>
+                <ul>
+                    <li>Shoulders align with hips</li>
+                    <li>Defined waistline</li>
+                    <li>Curved hip line</li>
+                    <li>Proportionate upper and lower body</li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <img src="static\knowmore\c6ee7c18-c6f8-4aa3-8534-8d804009db0b.png" alt="Pear" class="body-image" />
+                <h3>Pear</h3>
+                <p>The pear body shape features hips that are wider than the bust, with a defined waist.</p>
+                <ul>
+                    <li>Narrow shoulders and bust</li>
+                    <li>Defined waistline</li>
+                    <li>Fuller hips and thighs</li>
+                    <li>Rounded bottom</li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <img src="static\knowmore\_So_Ignorant_And_Irresponsible___Fashion_Designer_Slammed_For_Dress_Made_With_Living_Fish-removebg-.png" alt="Inverted Triangle" class="body-image" />
+                <h3>Inverted Triangle</h3>
+                <p>The inverted triangle body shape has a bust that is wider than the hips, with a less defined waist.</p>
+                <ul>
+                    <li>Broad shoulders</li>
+                    <li>Larger bust</li>
+                    <li>Narrow hips</li>
+                    <li>Slender legs</li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <img src="static\knowmore\standing girl reference.png" alt="Rectangle" class="body-image" />
+                <h3>Rectangle</h3>
+                <p>The rectangle body shape has balanced bust and hips with a less defined waist, creating a straight silhouette.</p>
+                <ul>
+                    <li>Shoulders align with hips</li>
+                    <li>Minimal waist definition</li>
+                    <li>Even distribution of weight</li>
+                    <li>Athletic build</li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <img src="static\knowmore\Plus Butterfly Sleeve Self Tie Dress.png" alt="Apple" class="body-image" />
+                <h3>Apple</h3>
+                <p>The apple body shape features a fuller bust and waist with narrower hips, often with slim legs.</p>
+                <ul>
+                    <li>Broader shoulders</li>
+                    <li>Fuller bust and waist</li>
+                    <li>Narrow hips</li>
+                    <li>Slender legs</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+ </section>
+ 
+ <footer class="footer">
+  <div class="footer__addr">
+    <h1 class="footer__logo".logo {
+      position: absolute;
+      left: 20px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.8rem;
+      color: #FFFFFF;
+  }>STYLESCULPT</h1>
+        
+    <h2>Contact</h2>
+    
+    <address>
+     <br>
+          
+      <a class="footer__btn" href="#">Email Us</a>
+    </address>
+  </div>
+  <ul class="footer__nav">
+    <li class="nav__item">
+      <a href="./home.html"><h2 class="nav__title"></h2>Home</a>
+      
+
+      <ul class="nav__ul">
+        <li>
+          <a href="./recom.html">Recommendations</a>
+        </li>
+
+        <li>
+          <a href="./know.html">Know More</a>
+        </li>
+            
+        <li>
+          <a href="./challenge.html">Challenge</a>
+        </li>
+      </ul>
+    </li>
+    
+    
+      
+    
+  <div class="legal">
+    <p>&copy; 2024 Something. All rights reserved.</p>
+    
+    <div class="legal__links">
+      <span>Made with <span class="heart">♥</span> remotely from Anywhere</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

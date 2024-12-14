@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STYLESCULPT</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300&family=Rubik:wght@400;500;700&display=swap">
+<style>
+ body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+ }
+.header {
+    background-color: black;
+    padding: 20px 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.nav-links li {
+    margin: 0 20px;
+    position: relative;
+    color: #fff; 
+}
+
+.nav-links a {
+    text-decoration: none; 
+    color: #FFFFFF;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem; 
+}
+
+.nav-links a:hover {
+    text-decoration: none; 
+}
+
+/* Hover effect */
+.menu1 li:after,
+.menu1 li:before {
+    content: "";
+    position: absolute;
+    display: block;
+    border: 0 solid transparent;
+    width: 0%;
+    height: 0%;
+    transition: all 0.3s ease;
+}
+
+.menu1 li:after {
+    top: 0;
+    left: 0;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+}
+
+.menu1 li:before {
+    right: 0;
+    bottom: 0;
+    border-bottom: 2px solid transparent;
+    border-right: 2px solid transparent;
+}
+
+.menu1 li:hover::before,
+.menu1 li:hover::after {
+    width: 10px;
+    height: 10px;
+    border-color: #ff8b8b; 
+}
+
+.logo {
+    position: absolute; 
+    left: 20px; 
+    font-family: 'Bebas Neue', sans-serif; 
+    font-size: 1.8rem; /* Optionally increase logo font size */
+    color: #FFFFFF;
+}
+
+
+a {
+    text-decoration: none; /* Remove underline from all anchor tags */
+}
+
+/*Hero-section*/
+.hero-section {
+    background-color: #000000;
+    color: white;
+    padding: 50px 0;
+    position: relative;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center contents horizontally */
+    justify-content: center; /* Center contents vertically */
+}
+
+.button-86 {
+    all: unset;
+    width: 150px; /* Increased width */
+    height: 50px; /* Increased height */
+    font-size: 18px; /* Increased font size */
+    background: transparent;
+    border: none;
+    position: relative;
+    color: #f0f0f0;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+  
+.button-86::after,
+.button-86::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -99999;
+    transition: all .4s;
+}
+  
+.button-86::before {
+    transform: translate(0%, 0%);
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #ffafbd, #ffc3a0);
+    border-radius: 10px;
+}
+  
+.button-86::after {
+    transform: translate(10px, 10px);
+    width: 45px; /* Adjusted to fit the larger button */
+    height: 45px; /* Adjusted to fit the larger button */
+    background: #ffffff15;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 50px;
+}
+  
+.button-86:hover::before {
+    transform: translate(5%, 20%);
+    width: 110%;
+    height: 110%;
+}
+  
+.button-86:hover::after {
+    border-radius: 10px;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+}
+  
+.button-86:active::after {
+    transition: 0s;
+    transform: translate(0, 5%);
+}
+
+.how-it-works {
+    background: linear-gradient(90deg, #ffafbd, #ffc3a0);
+    padding: 30px 0;
+  }
+  .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 900px;  /* Set the width to make the container narrower */
+    margin: 0 auto; 
+  }
+  .title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+  }
+  .step {
+    margin-bottom: 20px;
+  }
+  .step-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  .step-content {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-item {
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #222; /* Darker background for grid items */
+    text-align: left; 
+    transition: transform 0.2s;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+.body-image {
+    width: 100%;
+    height: auto;
+}
+
+h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    font-family: 'Museo Sans', sans-serif;
+}
+
+p {
+    margin: 10px 0;
+    font-family: 'Museo Sans', sans-serif;
+}
+
+ul {
+    list-style-type: disc; 
+    padding-left: 20px; 
+}
+
+.points-list {
+    margin: 0; 
+}
+
+.understand-bodyh2 {
+    text-align: center; 
+    font-family: 'Museo Sans', sans-serif;
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+.hero-section h1 {
+    font-size: 4rem; /* Increased font size */
+    text-align: center;
+}
+
+.hero-section h3 {
+    font-size: 2rem; /* Add h3 styling if needed */
+    text-align: center; /* Center text */
+    margin-top: 10px; /* Spacing if necessary */
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+.style-sculpt-text {
+    font-size: 75px;
+    position: absolute;
+    left: -150px; 
+    top: 50%; 
+    transform: translateY(-50%) rotate(-90deg);
+    color: transparent;
+    -webkit-text-stroke: 1px gray;
+    
+}
+
+.button-wrapper {
+    position: relative;
+    width: 150px;
+    text-align: center;
+    margin: 20% auto;
+    margin-top: 20px;
+  }
+  
+  .button-wrapper span.label {
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    width: 100%;
+    background: #00bfff;
+    cursor: pointer;
+    color: #fff;
+    padding: 10px 0;
+    text-transform:uppercase;
+    font-size:12px;
+  }
+  
+  #upload {
+      display: inline-block;
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 50px;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      cursor: pointer;
+  }
+ 
+.footer {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 30px 30px 20px 30px;
+    color: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-color:  linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    border-top: 1px solid #e5e5e5;
+  }
+  
+  .footer > * {
+    flex:  1 100%;
+  }
+  
+  .footer__addr {
+    margin-right: 1.25em;
+    margin-bottom: 2em;
+  }
+  
+  .footer__logo {
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+    text-transform: lowercase;
+    font-size: 1.5rem;
+  }
+  
+  .footer__addr h2 {
+    margin-top: 1.3em;
+    font-size: 15px;
+    font-weight: 400;
+    color: black;
+  }
+  
+  .nav__title {
+    font-weight: 400;
+    font-size: 15px;
+    color: black;
+  }
+  
+  .footer address {
+    font-style: normal;
+    color: rgb(37, 37, 37);
+  }
+  
+  .footer__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    max-width: max-content;
+    background-color: rgb(33, 33, 33, 0.07);
+    border-radius: 100px;
+    color: #2f2f2f;
+    line-height: 0;
+    margin: 0.6em 0;
+    font-size: 1rem;
+    padding: 0 1.3em;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .footer li {
+    line-height: 2em;
+  }
+  
+  .footer a {
+    text-decoration: none;
+  }
+  
+  .footer__nav {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+  .footer__nav > * {
+    flex: 1 50%;
+    margin-right: 1.25em;
+  }
+  
+  .nav__ul a {
+    color: #999;
+  }
+  
+  .nav__ul--extra {
+    column-count: 2;
+    column-gap: 1.25em;
+  }
+  
+  .legal {
+    display: flex;
+    flex-wrap: wrap;
+    color: black;
+  }
+    
+  .legal__links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .heart {
+    color: black;
+  }
+  
+  @media screen and (min-width: 24.375em) {
+    .legal .legal__links {
+      margin-left: auto;
+    }
+  }
+  
+  @media screen and (min-width: 40.375em) {
+    .footer__nav > * {
+      flex: 1;
+    }
+    
+    .nav__item--extra {
+      flex-grow: 2;
+    }
+    
+    .footer__addr {
+      flex: 1 0px;
+    }
+    
+    .footer__nav {
+      flex: 2 0px;
+    }
+  }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <span>STYLESCULPT</span>
+            </div>
+            <ul class="nav-links menu1">
+                <li><a href="{{ url_for('home') }}">HOME</a></li>
+                <li><a href="{{ url_for('recommendation') }}">RECOMMENDATIONS</a></li>
+                <!-- In your navigation bar -->
+                <li><a href="{{ url_for('know_more') }}">KNOW MORE</a></li>
+                <li><a href="{{ url_for('challenge') }}">CHALLENGE</a></li>
+            </ul>
+        </nav>
+    </header>
+<div class="hero-section">
+    <div class="style-sculpt-text">STYLESCULPT</div>
+    <h1>Discover Your Perfect Fit!</h1>
+    <p>Find Your Fit: Discover Styles That Celebrate Your Shape!</p>
+    <br>
+    <a href="{{ url_for('index') }}"><button class="button-86" role="button">Let's Start</button></a>
+</div>
+
+<section  class="how-it-works">
+    <div class="container">
+      <h1 class="title">How Does This Work?</h1>
+      <div class="steps">
+        <div class="step">
+          <h2 class="step-title">Step 1: Upload Your Image</h2>
+          <ul class="step-content">
+            <li>Upload Image: Alternatively, you can upload an existing image from your device.</li>
+          </ul>
+        </div>
+        <div class="step">
+          <h2 class="step-title">Step 2: Request Analysis</h2>
+          <ul class="step-content">
+            <li>Submit Your Image: After uploading, request an analysis of your body shape.</li>
+          </ul>
+        </div>
+        <div class="step">
+          <h2 class="step-title">Step 3: Receive Recommendations</h2>
+          <ul class="step-content">
+            <li>Browse Options: Explore the recommended styles, including different colors, patterns, and sizes.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</section>
+<footer class="footer">
+  <div class="footer__addr">
+    <h1 class="footer__logo".logo {
+      position: absolute;
+      left: 20px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.8rem;
+      color: #FFFFFF;
+  }>STYLESCULPT</h1>
+        
+    <h2>Contact</h2>
+    
+    <address>
+     <br>
+          
+      <a class="footer__btn" href="#">Email Us</a>
+    </address>
+  </div>
+  <ul class="footer__nav">
+    <li class="nav__item">
+      <a href="./home.html"><h2 class="nav__title"></h2>Home</a>
+      
+
+      <ul class="nav__ul">
+        <li>
+          <a href="./recom.html">Recommendations</a>
+        </li>
+
+        <li>
+          <a href="./know.html">Know More</a>
+        </li>
+            
+        <li>
+          <a href="./challenge.html">Challenge</a>
+        </li>
+      </ul>
+    </li>
+    
+    
+      
+    
+  <div class="legal">
+    <p>&copy; 2024 Something. All rights reserved.</p>
+    
+    <div class="legal__links">
+      <span>Made with <span class="heart">♥</span> remotely from Anywhere</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
+  

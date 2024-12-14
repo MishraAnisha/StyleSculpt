@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STYLESCULPT - Recommendations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <style>
+    body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .header {
+        background-color: black;
+        padding: 20px 0;
+    }
+    
+    .nav {
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        width: 100%;
+    }
+    
+    .nav-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        flex: 1;
+    }
+    
+    .nav-links li {
+        margin: 0 20px;
+        position: relative;
+        color: #fff; 
+    }
+    
+    .nav-links a {
+        text-decoration: none; 
+        color: #FFFFFF;
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 1.5rem; 
+    }
+    
+    .nav-links a:hover {
+        text-decoration: none; 
+    }
+    
+    /* Hover effect */
+    .menu1 li:after,
+    .menu1 li:before {
+        content: "";
+        position: absolute;
+        display: block;
+        border: 0 solid transparent;
+        width: 0%;
+        height: 0%;
+        transition: all 0.3s ease;
+    }
+    
+    .menu1 li:after {
+        top: 0;
+        left: 0;
+        border-top: 2px solid transparent;
+        border-left: 2px solid transparent;
+    }
+    
+    .menu1 li:before {
+        right: 0;
+        bottom: 0;
+        border-bottom: 2px solid transparent;
+        border-right: 2px solid transparent;
+    }
+    
+    .menu1 li:hover::before,
+    .menu1 li:hover::after {
+        width: 10px;
+        height: 10px;
+        border-color: #ff8b8b; 
+    }
+    
+    .logo {
+        position: absolute; 
+        left: 20px; 
+        font-family: 'Bebas Neue', sans-serif; 
+        font-size: 1.8rem; /* Optionally increase logo font size */
+        color: #FFFFFF;
+    }
+    
+    .recommendation h1 {
+        font-family: 'Bebas Neue', sans-serif;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .grid-rec {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    @media (max-width: 768px) {
+        .grid-rec {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .grid-rec {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    .box {
+        background-color: white;
+        border-radius: 5px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    }
+    
+    .box img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+    
+    .button-57 {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid #18181a;
+        color: #18181a;
+        display: inline-block;
+        font-size: 15px;
+        line-height: 15px;
+        padding: 18px 18px 17px;
+        text-decoration: none;
+        cursor: pointer;
+        background: #fff;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+    
+    .button-57 span:first-child {
+        position: relative;
+        transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+        z-index: 10;
+    }
+    
+    .button-57 span:last-child {
+        color: white;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+        z-index: 100;
+        opacity: 0;
+        top: 50%;
+        left: 50%;
+        transform: translateY(225%) translateX(-50%);
+        height: 14px;
+        line-height: 13px;
+    }
+    
+    .button-57:after {
+        content: "";
+        position: absolute;
+        bottom: -50%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        transform-origin: bottom center;
+        transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+        transform: skewY(9.3deg) scaleY(0);
+        z-index: 50;
+    }
+    
+    .button-57:hover:after {
+        transform-origin: bottom center;
+        transform: skewY(9.3deg) scaleY(2);
+    }
+    
+    .button-57:hover span:last-child {
+        transform: translateX(-50%) translateY(-100%);
+        opacity: 1;
+        transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+    }
+    
+    /*FOOTER*/
+    
+    
+    :root {
+        --light: #ffffff;
+        --dark: #000;
+      }
+      
+      h3 {
+        font-family: "Noto Serif Display", serif;
+        font-size: 2.3rem;
+        font-weight: 300;
+        text-align: center;
+      }
+      a {
+        text-decoration: none;
+        color: var(--dark);
+        font-weight: 400;
+        transition: 0.3s ease-in;
+        border-bottom: 1px solid transparent;
+        margin-bottom: 0.5rem;
+        display: inline-flex;
+      }
+      a:hover {
+        border-bottom: 1px solid var(--dark);
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      button {
+        appearance: none;
+        border: 0;
+        background: transparent;
+      }
+      .flex {
+        display: flex;
+      }
+      .footer_video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+        border: none;
+      }
+      .footer_inner {
+        background: var(--light);
+        backdrop-filter: blur(50px);
+        border: 0.1px solid rgba(233, 232, 232, 0.208);
+        border-radius: 5px;
+        padding: 2rem;
+        margin: 1rem 0;
+      }
+      .footer {
+        position: relative;
+        display: flex;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .container {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+      
+      form {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: min(100%, 400px);
+        border-bottom: 1px solid var(--dark);
+      }
+      
+      input {
+        padding: 0.75rem 0;
+        border: none;
+        background: none;
+        font-weight: 500;
+        transition: border 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+        border-radius: 0;
+        width: 100%;
+        font-size: 1.05rem;
+        font-weight: bolder;
+      }
+      input:focus {
+        outline: none;
+      }
+      input::placeholder {
+        color: var(--dark);
+      }
+      @media (min-width: 675px) {
+        .layout {
+          display: flex;
+          flex-wrap: nowrap;
+          column-gap: 2rem;
+        }
+        .w-50 {
+          width: 50%;
+        }
+        .w-25 {
+          width: 25%;
+        }
+      }
+      form {
+        position: relative;
+      }
+      svg {
+        margin: 0.5rem;
+      }
+      .c-2 {
+        margin-top: 3.5rem;
+      }
+      .footer_copyright {
+        color: var(--light);
+      }</style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <span>STYLESCULPT</span>
+            </div>
+            <ul class="nav-links menu1">
+                <li><a href="{{ url_for('home') }}">HOME</a></li>
+                <li><a href="{{ url_for('recommendation') }}">RECOMMENDATIONS</a></li>
+                <li><a href="{{ url_for('home') }}">KNOW MORE</a></li>
+                <li><a href="#blog">BLOG</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="recommendation">
+            <h1>FIND DRESS THAT SUITS YOUR BODY</h1>
+            <div class="grid-rec">
+                <div class="box">
+                    <img src="{{ url_for('static', filename='images/hourglass2.png') }}" alt="Hourglass">
+                    <h3>Hourglass</h3>
+                    <a href="{{ url_for('cloth', body_shape='hourglass') }}"><button class="button-57" role="button"><span class="text">RECOMMEND</span></button></a>
+                </div>
+                <div class="box">
+                    <img src="{{ url_for('static', filename='images/inverted.png') }}" alt="Inverted Triangle">
+                    <h3>Inverted Triangle</h3>
+                    <a href="{{ url_for('cloth', body_shape='inverted_triangle') }}"><button class="button-57" role="button"><span class="text">RECOMMEND</span></button></a>
+                </div>
+                <div class="box">
+                    <img src="{{ url_for('static', filename='images/apple1.png') }}" alt="Apple">
+                    <h3>Apple</h3>
+                    <a href="{{ url_for('cloth', body_shape='apple') }}"><button class="button-57" role="button"><span class="text">RECOMMEND</span></button></a>
+                </div>
+                <div class="box">
+                    <img src="{{ url_for('static', filename='images/pear1.png') }}" alt="Pear">
+                    <h3>Pear</h3>
+                    <a href="{{ url_for('cloth', body_shape='pear') }}"><button class="button-57" role="button"><span class="text">RECOMMEND</span></button></a>
+                </div>
+                <div class="box">
+                    <img src="{{ url_for('static', filename='images/rectangle1.png') }}" alt="Rectangle">
+                    <h3>Rectangle</h3>
+                    <a href="{{ url_for('cloth', body_shape='rectangle') }}"><button class="button-57" role="button"><span class="text">RECOMMEND</span></button></a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
